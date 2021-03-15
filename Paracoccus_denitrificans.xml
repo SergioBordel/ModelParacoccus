@@ -1524,14 +1524,15 @@
       <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_NO"/>
       <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_N2O"/>
       <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_N2"/>
-      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_cpd15317_c0" name="1_Acyl_sn_glycero_3_phosphoethanolamine_hexadec_9_enoyl_c0" compartment="c0" fbc:charge="0"/>
       <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_cpd02654_c0" name="4_Methyl_5__2_phosphoethyl_thiazole_c0" compartment="c0" fbc:charge="-2"/>
-      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_cpd00276_e0" name="GLUM_e0" compartment="e0" fbc:charge="1"/>
       <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_H2"/>
       <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_14but"/>
       <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_4hydroxybutyraldehyde"/>
       <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_4hydroxybutyrate"/>
       <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_succinate_semialdehyde"/>
+      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_cpd12076_c0" name="Reduced_glutathione"/>
+      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_Shydmetglut" name="S-hydroxymethylglutathione"/>
+      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="M_Sforglut" name="S-formylglutathione"/>
     </listOfSpecies>
     <fbc:listOfGeneProducts>
       <fbc:geneProduct fbc:id="G_6666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__4942" fbc:label="6666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__4942" fbc:name="6666666.653812.peg.4942"/>
@@ -2308,6 +2309,13 @@
       <fbc:geneProduct fbc:id="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__5151" fbc:label="666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__5151" fbc:name="666666.653812.peg.5151"/>
       <fbc:geneProduct fbc:id="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__246" fbc:label="666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__246" fbc:name="666666.653812.peg.246"/>
       <fbc:geneProduct fbc:id="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__2316" fbc:label="666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__2316" fbc:name="666666.653812.peg.2316"/>
+      <fbc:geneProduct fbc:id="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__15" fbc:label="666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__15" fbc:name="666666.653812.peg.15"/>
+      <fbc:geneProduct fbc:id="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__16" fbc:label="666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__16" fbc:name="666666.653812.peg.16"/>
+      <fbc:geneProduct fbc:id="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__19" fbc:label="666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__19" fbc:name="666666.653812.peg.19"/>
+      <fbc:geneProduct fbc:id="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__5152" fbc:label="666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__5152" fbc:name="666666.653812.peg.5152"/>
+      <fbc:geneProduct fbc:id="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__4027" fbc:label="666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__4027" fbc:name="666666.653812.peg.4027"/>
+      <fbc:geneProduct fbc:id="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__4026" fbc:label="666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__4026" fbc:name="666666.653812.peg.4026"/>
+      <fbc:geneProduct fbc:id="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__4025" fbc:label="666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__4025" fbc:name="666666.653812.peg.4025"/>
     </fbc:listOfGeneProducts>
     <listOfReactions>
       <reaction fast="false" id="R_rxn00351_c0" reversible="false" name="gamma_L_glutamyl_L_cysteine_glycine_ligase_ADP_forming_c0" fbc:upperFluxBound="cobra_default_ub" fbc:lowerFluxBound="cobra_0_bound">
@@ -7793,7 +7801,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction fast="false" id="R_rxn00330_c0" reversible="true" name="acetyl_CoA_glyoxylate_C_acetyltransferase_thioester_hydrolysing__carboxymethyl_forming_c0" fbc:upperFluxBound="cobra_default_ub" fbc:lowerFluxBound="cobra_default_lb">
+      <reaction fast="false" id="R_rxn00330_c0" reversible="false" name="acetyl_CoA_glyoxylate_C_acetyltransferase_thioester_hydrolysing__carboxymethyl_forming_c0" fbc:upperFluxBound="cobra_default_ub" fbc:lowerFluxBound="cobra_0_bound">
         <listOfReactants>
           <speciesReference constant="true" species="M_cpd00001_c0" stoichiometry="1"/>
           <speciesReference constant="true" species="M_cpd00022_c0" stoichiometry="1"/>
@@ -22220,6 +22228,79 @@
             <fbc:geneProductRef fbc:geneProduct="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__5151"/>
             <fbc:geneProductRef fbc:geneProduct="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__246"/>
           </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction fast="false" id="R_rxnEC4.4.1.22" reversible="false" fbc:upperFluxBound="cobra_default_ub" fbc:lowerFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference constant="true" species="M_cpd00055_c0" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd12076_c0" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="true" species="M_Shydmetglut" stoichiometry="1"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__15"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction fast="false" id="R_rxnEC1.1.1.284" reversible="false" fbc:upperFluxBound="cobra_default_ub" fbc:lowerFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference constant="true" species="M_Shydmetglut" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd00003_c0" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="true" species="M_Sforglut" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd00004_c0" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd00067_c0" stoichiometry="1"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__16"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction fast="false" id="R_rxn3.1.2.12" reversible="false" fbc:upperFluxBound="cobra_default_ub" fbc:lowerFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference constant="true" species="M_Sforglut" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd00001_c0" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="true" species="M_cpd00047_c0" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd12076_c0" stoichiometry="1"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__19"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction fast="false" id="R_rxn00159_c0" reversible="false" fbc:upperFluxBound="cobra_default_ub" fbc:lowerFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference constant="true" species="M_cpd00003_c0" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd00130_c0" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="true" species="M_cpd00004_c0" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd00011_c0" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd00020_c0" stoichiometry="1"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__5152"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction fast="false" id="R_PDH" reversible="false" fbc:upperFluxBound="cobra_default_ub" fbc:lowerFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference constant="true" species="M_cpd00003_c0" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd00010_c0" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd00020_c0" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="true" species="M_cpd00004_c0" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd00011_c0" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd00022_c0" stoichiometry="1"/>
+          <speciesReference constant="true" species="M_cpd00067_c0" stoichiometry="1"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__4025"/>
+            <fbc:geneProductRef fbc:geneProduct="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__4026"/>
+            <fbc:geneProductRef fbc:geneProduct="G_666666__SBML_DOT__653812__SBML_DOT__peg__SBML_DOT__4027"/>
+          </fbc:and>
         </fbc:geneProductAssociation>
       </reaction>
     </listOfReactions>
